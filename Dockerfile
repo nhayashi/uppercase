@@ -1,5 +1,5 @@
 # Set the base image to use for subsequent instructions
-FROM alpine:3.19
+FROM debian:10.2
 
 # Set the working directory inside the container
 WORKDIR /usr/src

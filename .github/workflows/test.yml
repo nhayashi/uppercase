@@ -1,0 +1,21 @@
+name: "test"
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run uppercase action
+        id: uppercase
+        uses: ./
+        with:
+          text: "hello, world"
+      - name: Check outputs
+        run: |
+          echo "The uppercase text is ${{ steps.uppercase.outputs.uppercase-text }}"
