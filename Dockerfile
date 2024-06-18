@@ -1,5 +1,5 @@
 # Set the base image to use for subsequent instructions
-FROM debian:10.2
+FROM debian:12.5
 
 # Set the working directory inside the container
 WORKDIR /usr/src
